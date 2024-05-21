@@ -1,0 +1,7 @@
+Steps used to complete FE Task : 
+Note this steps will be updated and will be added as a readme for the Repo when I finalize the task inshallah. 
+First of all I decided to start with the front end task as the first period of the role will be front end , as stated I can switch after that.
+
+1- First of all plan how the file system will work ,where the assets will be, how the arch will be stored and figure out how files are organized when developing a frontend using react. 
+2- figure out steps for development of websites using react. 
+3- Get to know more about react overall and installing any needed packages for development. 
