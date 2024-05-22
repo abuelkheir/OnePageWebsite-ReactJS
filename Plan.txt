@@ -5,3 +5,6 @@ First of all I decided to start with the front end task as the first period of t
 1- First of all plan how the file system will work ,where the assets will be, how the arch will be stored and figure out how files are organized when developing a frontend using react. 
 2- figure out steps for development of websites using react. 
 3- Get to know more about react overall and installing any needed packages for development. 
+
+Finished the steps above sucessfully and created my first app 
+__________________________________________________________________________________________________________
