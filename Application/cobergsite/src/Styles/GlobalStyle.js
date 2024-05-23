@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;

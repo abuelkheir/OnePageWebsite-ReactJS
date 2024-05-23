@@ -12,6 +12,6 @@ ________________________________________________________________________________
 4- Analyze figma Design to oraganize assets going to be used also checking if there are different styling options for sections to be tested too. 
 5- Watching a tutorial to give a quick introduction to React. 
 6- Identify gaps of what I need to learn to start developing and to breakdown the project. 
-7- Developing project for mobile devices first , then using media queries for desktop/ larger screens.
+7- Developing project for desktop first , then using media queries for mobile screens if I had time left.
 
 ... note : to add more steps 
