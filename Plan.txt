@@ -9,9 +9,19 @@ First of all I decided to start with the front end task as the first period of t
 Finished the steps above sucessfully and created my first app ✅
 __________________________________________________________________________________________________________
 
-4- Analyze figma Design to oraganize assets going to be used also checking if there are different styling options for sections to be tested too. 
-5- Watching a tutorial to give a quick introduction to React. 
-6- Identify gaps of what I need to learn to start developing and to breakdown the project. 
-7- Developing project for desktop first , then using media queries for mobile screens if I had time left.
+4- Analyze figma Design to oraganize assets going to be used also checking if there are different styling options for sections to be tested too. ✅
+5- Watching a tutorial to give a quick introduction to React. ✅
 
-... note : to add more steps 
+6- Identify gaps of what I need to learn to start developing and to breakdown the project. ✅
+7- Developing project for desktop first , then using media queries for mobile screens if I had time left. ( In progress)
+
+___________________________________________________________________________________________________________
+8- Decided to develop it as seperate sections that assembeled at App.js.
+9- Develop Why land Interiors Section.  
+10- Develop Whatwedo Section.
+11- Develop Blogs section. 
+12- Develop Footer Section. 
+13- Add tirqoise rectangle. 
+14- first Draft.
+15- Refurbishments for each section. 
+16- Media Queries for mobile version. 
