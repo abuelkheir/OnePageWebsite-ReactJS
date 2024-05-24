@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import logoImage from '../Assets/MainLogo/MainLogo.svg'; // Corrected path
+import React from "react";
+import styled from "styled-components";
+import logoImage from "../Assets/MainLogo/MainLogo.svg"; // Corrected path
 
 // Styled components for the header elements
 const HeaderContainer = styled.header`
@@ -43,7 +43,7 @@ const JoinUs = styled.div`
 const Partner = styled.div`
   font-size: 1rem;
   color: #451a64;
-  margin-left: 20px;
+  margin-left: 290px;
 `;
 
 const Navigation = styled.nav`
@@ -61,7 +61,7 @@ const NavigationList = styled.ul`
 const NavigationItem = styled.li`
   font-size: 1rem;
   color: black;
-  margin: 0 10px;
+  margin: 0 80px;
 `;
 
 const Header = () => {

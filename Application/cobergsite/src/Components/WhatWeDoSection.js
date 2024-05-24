@@ -1,16 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-import BedroomImg from "../Assets/WhatWeDoImages/Bedroom.png";
-import HomeOfficeImg from "../Assets/WhatWeDoImages/HomeOffice.png";
-import LivingRoomImg from "../Assets/WhatWeDoImages/LivingRoom.png";
-import ModularKitchenImg from "../Assets/WhatWeDoImages/ModularKitchen.png";
+import BedroomImage from "../Assets/WhatWeDoImages/Bedroom.png";
+import HomeOfficeImage from "../Assets/WhatWeDoImages/HomeOffice.png";
+import LivingRoomImage from "../Assets/WhatWeDoImages/LivingRoom.png";
+import ModularKitchenImage from "../Assets/WhatWeDoImages/ModularKitchen.png";
 
 const images = [
-  { src: BedroomImg, alt: "Bedroom", label: "Bedroom" },
-  { src: HomeOfficeImg, alt: "Home Office", label: "Home Office" },
-  { src: LivingRoomImg, alt: "Living Room", label: "Living Room" },
-  { src: ModularKitchenImg, alt: "Modular Kitchen", label: "Modular Kitchen" },
+  { src: BedroomImage, alt: "Bedroom", label: "Bedroom" },
+  { src: HomeOfficeImage, alt: "Home Office", label: "Home Office" },
+  { src: LivingRoomImage, alt: "Living Room", label: "Living Room" },
+  {
+    src: ModularKitchenImage,
+    alt: "Modular Kitchen",
+    label: "Modular Kitchen",
+  },
 ];
 
 const WhatWeDoContainer = styled.div`
@@ -24,32 +28,35 @@ const WhatWeDoContainer = styled.div`
 const WhyLandTitle = styled.h2`
   font-size: 2rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-family: "Poppins", sans-serif; /* Use Poppins font */
 `;
 
-const LogosContainer = styled.div`
+const ImagesContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 `;
 
-const LogoItemContainer = styled.div`
+const ImageItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
 `;
 
-const LogoItem = styled.img`
+const ImageItem = styled.img`
   width: 150px;
   height: auto;
+
+  radius: 15;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 `;
 
 const ImageSubtitle = styled.p`
   font-size: 1rem;
   color: #451a64;
-  margin-top: 5px;
+  margin-top: 20px;
   font-family: "Poppins", sans-serif; /* Use Poppins font */
   font-weight: 600;
 `;
@@ -68,15 +75,15 @@ const WhatWeDoSection = () => {
   return (
     <WhatWeDoContainer>
       <WhyLandTitle>Why LAND Interiors</WhyLandTitle>
-      <LogosContainer>
+      <ImagesContainer>
         {images.map((image, index) => (
-          <LogoItemContainer key={index}>
-            <LogoItem src={image.src} alt={image.alt} />
+          <ImageItemContainer key={index}>
+            <ImageItem src={image.src} alt={image.alt} />
             <ImageSubtitle>{image.label}</ImageSubtitle>
             {image.subtitle && <ImageSubtitle>{image.subtitle}</ImageSubtitle>}
-          </LogoItemContainer>
+          </ImageItemContainer>
         ))}
-      </LogosContainer>
+      </ImagesContainer>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
         purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor

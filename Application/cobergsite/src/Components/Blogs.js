@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import BlogImage1 from "../Assets/Blogs/ModernInterior.png";
 import BlogImage2 from "../Assets/Blogs/ExteriorProject.png";
 import BlogImage3 from "../Assets/Blogs/GreyBeauty.png";
 import BlogImage4 from "../Assets/Blogs/PlantationInterior.png";
 import BlogImage5 from "../Assets/Blogs/RoleofFurnitures.png";
+import Arrow from "../Assets/OtherLogos/ArrowVector.svg";
 
 const blogs = [
   {
@@ -51,37 +50,33 @@ const BlogSection = styled.div`
     margin-bottom: 20px;
     font-family: "Poppins", sans-serif;
   }
+`;
 
-  .carousel .slide {
-    background: none;
-  }
+const BlogContainer = styled.div`
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  position: relative;
 
-  .carousel .control-dots .dot {
-    background: #333;
-  }
-
-  .carousel .legend {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    font-size: 1.2rem;
-    bottom: 20px;
+  &::-webkit-scrollbar {
+    display: none; // no scrollbar
   }
 `;
 
 const BlogCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 20px;
   text-align: center;
-  padding: 20px;
 
   img {
     width: 100%;
-    max-width: 300px; /* Ensures images do not exceed a certain width */
-    height: 200px; /* Fixed height based on the Figma design */
+    height: 200px; /* Fixed height to ensure consistency */
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added drop shadow */
   }
 
   .title {
@@ -92,25 +87,67 @@ const BlogCard = styled.div`
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Smaller font size for description */
     margin-top: 5px;
     color: #555;
     font-family: "Poppins", sans-serif;
   }
 `;
 
-const CarouselContainer = styled.div`
-  max-width: 1100px; /* Adjust based on your design constraints */
-  margin: 0 auto;
-  position: relative; /* Positioning based on the Figma design */
+const ArrowButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 60px; /* Wider button for rectangle shape */
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible; /* Ensure visibility */
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Blogs = () => {
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
   return (
     <BlogSection>
-      <h2>Our Latest Blogs</h2>
-      <CarouselContainer>
-        <Carousel showThumbs={false} autoPlay infiniteLoop>
+      <h2>Blogs</h2>
+      <div style={{ position: "relative" }}>
+        <ArrowButton className="left" onClick={scrollLeft}>
+          <img src={Arrow} alt="Left" />
+        </ArrowButton>
+        <ArrowButton className="right" onClick={scrollRight}>
+          <img src={Arrow} alt="Right" />
+        </ArrowButton>
+        <BlogContainer ref={containerRef}>
           {blogs.map((blog, index) => (
             <BlogCard key={index}>
               <img src={blog.image} alt={blog.title} />
@@ -118,8 +155,8 @@ const Blogs = () => {
               <div className="description">{blog.description}</div>
             </BlogCard>
           ))}
-        </Carousel>
-      </CarouselContainer>
+        </BlogContainer>
+      </div>
     </BlogSection>
   );
 };

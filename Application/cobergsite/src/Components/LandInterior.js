@@ -45,6 +45,8 @@ const LogoImage = styled.img`
   width: 80px;
   height: auto;
   margin-bottom: 20px;
+  // border: none; /* Make the border invisible */
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); /* Add a shadow */
 `;
 
 const LogoLabel = styled.p`

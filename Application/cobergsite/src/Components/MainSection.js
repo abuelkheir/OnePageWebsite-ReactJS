@@ -11,12 +11,18 @@ const MainSectionContainer = styled.section`
   background-color: #fff;
 `;
 
-const ImageTextContainer = styled.div`
-  display: flex;
-  align-items: center;
+const CardContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.25); /* White with 25% opacity */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure the card clips overflow content */
+`;
+
+const ImageTextContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const MainImage = styled.img`
@@ -28,13 +34,12 @@ const MainText = styled.div`
   width: 50%;
   padding: 20px;
   text-align: left;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-family: "Poppins", sans-serif;
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #333;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
 `;
 
 const Subtitle = styled.h2`
@@ -48,8 +53,6 @@ const Description = styled.p`
   color: #666;
   margin-top: 10px;
   font-weight: bold;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
-  // font-weight: 600;
 `;
 
 const ConsultantButton = styled.button`
@@ -62,21 +65,20 @@ const ConsultantButton = styled.button`
   cursor: pointer;
 `;
 
-// Todo , add the background for the text , adjust opacity as needed ,
-// fix image size ,
-// fix image size to be full page
 const MainSection = () => {
   return (
     <MainSectionContainer>
-      <ImageTextContainer>
-        <MainImage src={mainImage} alt="Main" />
-        <MainText>
-          <Title>Get Personalised Home Interiors</Title>
-          <Subtitle>Why LAND Interiors</Subtitle>
-          <Description>in just 50 days</Description>
-          <ConsultantButton>SPEAK WITH AN ONLINE CONSULTANT</ConsultantButton>
-        </MainText>
-      </ImageTextContainer>
+      <CardContainer>
+        <ImageTextContainer>
+          <MainImage src={mainImage} alt="Main" />
+          <MainText>
+            <Title>Get Personalised Home Interiors</Title>
+            <Subtitle>Why LAND Interiors</Subtitle>
+            <Description>in just 50 days</Description>
+            <ConsultantButton>SPEAK WITH AN ONLINE CONSULTANT</ConsultantButton>
+          </MainText>
+        </ImageTextContainer>
+      </CardContainer>
     </MainSectionContainer>
   );
 };

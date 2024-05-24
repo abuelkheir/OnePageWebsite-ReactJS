@@ -13,15 +13,24 @@ ________________________________________________________________________________
 5- Watching a tutorial to give a quick introduction to React. ✅
 
 6- Identify gaps of what I need to learn to start developing and to breakdown the project. ✅
-7- Developing project for desktop first , then using media queries for mobile screens if I had time left. ( In progress)
+7- Developing project for desktop first , then using media queries for mobile screens if I had time left. ( In progress)✅
 
 ___________________________________________________________________________________________________________
 8- Decided to develop it as seperate sections that assembeled at App.js.✅
 9- Develop Why land Interiors Section. ✅ 
-10- Develop Whatwedo Section.✅
-11- Develop Blogs section. 
-12- Develop Footer Section. 
+		(Shadows for logos , right size from design) 
+10- Develop Whatwedo Section.✅ 
+		(Image sizing)
+
+11- Develop Blogs section. ✅ 
+	(Fix arrow not showing , adjusting size to fit figma design)
+12- Develop Footer Section. ✅
+	(Fix sizes to fit the sizes in design) 
 13- Add tirqoise rectangle. 
-14- first Draft.
+
+14- first Draft.✅
+
 15- Refurbishments for each section. 
+
+__________________________________________________________________________
 16- Media Queries for mobile version. 
