@@ -94,6 +94,7 @@ const BlogCard = styled.div`
   }
 `;
 
+<<<<<<< HEAD
 const ArrowButton = styled.button`
   position: absolute;
   top: 50%;
@@ -124,6 +125,12 @@ const ArrowButton = styled.button`
     width: 20px;
     height: 20px;
   }
+=======
+const CarouselContainer = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+>>>>>>> c0e4688712bf9321b116660293c7fcece6e608eb
 `;
 
 const Blogs = () => {
