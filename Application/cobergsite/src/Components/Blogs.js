@@ -100,9 +100,9 @@ const BlogCard = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  max-width: 1100px; /* Adjust based on your design constraints */
+  max-width: 1100px;
   margin: 0 auto;
-  position: relative; /* Positioning based on the Figma design */
+  position: relative;
 `;
 
 const Blogs = () => {
