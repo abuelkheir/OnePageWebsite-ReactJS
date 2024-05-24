@@ -1,14 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import CalendarLogo from '../Assets/OtherLogos/CalendarLogo.svg';
-import HomeLogo from '../Assets/OtherLogos/HomeLogo.svg';
-import Certificate from '../Assets/OtherLogos/Certificate.svg';
+import CalendarLogo from "../Assets/OtherLogos/CalendarLogo.svg";
+import HomeLogo from "../Assets/OtherLogos/HomeLogo.svg";
+import Certificate from "../Assets/OtherLogos/Certificate.svg";
 
 const Logos = [
-  { src: CalendarLogo, alt: 'Calendar Logo', label: '50 days or we pay the rent' },
-  { src: HomeLogo, alt: 'Home Logo', label: '1500+ happy customers' },
-  { src: Certificate, alt: 'Certificate', label: '300+ design experts' }
+  {
+    src: CalendarLogo,
+    alt: "Calendar Logo",
+    label: "50 days or we pay the rent",
+  },
+  { src: HomeLogo, alt: "Home Logo", label: "1500+ happy customers" },
+  { src: Certificate, alt: "Certificate", label: "300+ design experts" },
 ];
 
 const SectionContainer = styled.section`
@@ -46,10 +50,9 @@ const LogoImage = styled.img`
 const LogoLabel = styled.p`
   font-size: 1.2rem;
   color: #451a64;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  font-weight: 600; 
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-weight: 600;
 `;
-
 
 const LandInterior = () => {
   return (

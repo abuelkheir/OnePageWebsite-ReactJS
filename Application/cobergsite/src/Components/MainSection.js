@@ -1,13 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import mainImage from '../Assets/HeaderImages/HeaderImage.png'; 
-
-// Check a better way for import 
-import BedroomImg from '../Assets/WhatWeDoImages/Bedroom.png';
-import HomeOfficeImg from '../Assets/WhatWeDoImages/HomeOffice.png';
-import LivingRoomImg from '../Assets/WhatWeDoImages/LivingRoom.png';
-import ModularKitchenImg from '../Assets/WhatWeDoImages/ModularKitchen.png';
+import mainImage from "../Assets/HeaderImages/HeaderImage.png";
 
 const MainSectionContainer = styled.section`
   padding: 40px 20px;
@@ -34,15 +28,13 @@ const MainText = styled.div`
   width: 50%;
   padding: 20px;
   text-align: left;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #333;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
 `;
 
 const Subtitle = styled.h2`
@@ -56,8 +48,8 @@ const Description = styled.p`
   color: #666;
   margin-top: 10px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  // font-weight: 600; 
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  // font-weight: 600;
 `;
 
 const ConsultantButton = styled.button`
@@ -70,54 +62,9 @@ const ConsultantButton = styled.button`
   cursor: pointer;
 `;
 
-const WhyLandInteriorsContainer = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  padding: 40px 20px;
-`;
-
-const WhyLandTitle = styled.h2`
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  // font-weight: 600; 
-`;
-
-const LogosContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`;
-
-const LogoItemContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-`;
-
-const LogoItem = styled.img`
-  width: 150px;
-  height: auto;
-`;
-
-const ImageSubtitle = styled.p`
-  font-size: 1rem;
-  color: #451a64;
-  margin-top: 5px;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  font-weight: 600; 
-`;
-
-const images = [
-  { src: BedroomImg, alt: 'Bedroom', label: 'Bedroom'},
-  { src: HomeOfficeImg, alt: 'Home Office', label: 'Home Office'},
-  { src: LivingRoomImg, alt: 'Living Room', label: 'Living Room' },
-  { src: ModularKitchenImg, alt: 'Modular Kitchen', label: 'Modular Kitchen' }
-];
-
+// Todo , add the background for the text , adjust opacity as needed ,
+// fix image size ,
+// fix image size to be full page
 const MainSection = () => {
   return (
     <MainSectionContainer>
@@ -130,18 +77,6 @@ const MainSection = () => {
           <ConsultantButton>SPEAK WITH AN ONLINE CONSULTANT</ConsultantButton>
         </MainText>
       </ImageTextContainer>
-      <WhyLandInteriorsContainer>
-        <WhyLandTitle>Why LAND Interiors</WhyLandTitle>
-        <LogosContainer>
-          {images.map((image, index) => (
-            <LogoItemContainer key={index}>
-              <LogoItem src={image.src} alt={image.alt} />
-              <ImageSubtitle>{image.label}</ImageSubtitle>
-              {image.subtitle && <ImageSubtitle>{image.subtitle}</ImageSubtitle>}
-            </LogoItemContainer>
-          ))}
-        </LogosContainer>
-      </WhyLandInteriorsContainer>
     </MainSectionContainer>
   );
 };
