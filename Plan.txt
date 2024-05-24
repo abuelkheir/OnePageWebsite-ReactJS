@@ -16,9 +16,9 @@ ________________________________________________________________________________
 7- Developing project for desktop first , then using media queries for mobile screens if I had time left. ( In progress)
 
 ___________________________________________________________________________________________________________
-8- Decided to develop it as seperate sections that assembeled at App.js.
-9- Develop Why land Interiors Section.  
-10- Develop Whatwedo Section.
+8- Decided to develop it as seperate sections that assembeled at App.js.✅
+9- Develop Why land Interiors Section. ✅ 
+10- Develop Whatwedo Section.✅
 11- Develop Blogs section. 
 12- Develop Footer Section. 
 13- Add tirqoise rectangle. 

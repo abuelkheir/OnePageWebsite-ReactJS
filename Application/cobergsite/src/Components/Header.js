@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoImage from '../Asssets/MainLogo/MainLogo.png'; // Corrected path
+import logoImage from '../Assets/MainLogo/MainLogo.svg'; // Corrected path
 
 // Styled components for the header elements
 const HeaderContainer = styled.header`

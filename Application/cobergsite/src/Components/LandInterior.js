@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CalendarLogo from '../Asssets/OtherLogos/CalendarLogo.svg';
-import HomeLogo from '../Asssets/OtherLogos/HomeLogo.svg';
-import Certificate from '../Asssets/OtherLogos/Certificate.svg';
+import CalendarLogo from '../Assets/OtherLogos/CalendarLogo.svg';
+import HomeLogo from '../Assets/OtherLogos/HomeLogo.svg';
+import Certificate from '../Assets/OtherLogos/Certificate.svg';
 
 const Logos = [
   { src: CalendarLogo, alt: 'Calendar Logo', label: '50 days or we pay the rent' },
@@ -47,7 +47,7 @@ const LogoLabel = styled.p`
   font-size: 1.2rem;
   color: #451a64;
   font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  font-weight: 600; /* Example of using a specific weight */
+  font-weight: 600; 
 `;
 
 

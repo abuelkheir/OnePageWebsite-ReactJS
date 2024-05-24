@@ -3,7 +3,8 @@ import GlobalStyle from './Styles/GlobalStyle';
 import Header from './Components/Header';
 import MainSection from './Components/MainSection';
 import LandInteriors from'./Components/LandInterior';
-
+// import Blogs from './Components/Blogs';
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Header />
       <MainSection />
       <LandInteriors/>
+      {/* <Blogs/> */}
+      <Footer/>
    
     </>
   );

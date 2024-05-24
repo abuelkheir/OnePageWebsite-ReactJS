@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import mainImage from '../Asssets/HeaderImages/HeaderImage.png'; 
+import mainImage from '../Assets/HeaderImages/HeaderImage.png'; 
 
 // Check a better way for import 
-import BedroomImg from '../Asssets/WhatWeDoImages/Bedroom.png';
-import HomeOfficeImg from '../Asssets/WhatWeDoImages/HomeOffice.png';
-import LivingRoomImg from '../Asssets/WhatWeDoImages/LivingRoom.png';
-import ModularKitchenImg from '../Asssets/WhatWeDoImages/ModularKitchen.png';
+import BedroomImg from '../Assets/WhatWeDoImages/Bedroom.png';
+import HomeOfficeImg from '../Assets/WhatWeDoImages/HomeOffice.png';
+import LivingRoomImg from '../Assets/WhatWeDoImages/LivingRoom.png';
+import ModularKitchenImg from '../Assets/WhatWeDoImages/ModularKitchen.png';
 
 const MainSectionContainer = styled.section`
   padding: 40px 20px;
@@ -34,11 +34,15 @@ const MainText = styled.div`
   width: 50%;
   padding: 20px;
   text-align: left;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #333;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  
 `;
 
 const Subtitle = styled.h2`
@@ -52,6 +56,8 @@ const Description = styled.p`
   color: #666;
   margin-top: 10px;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  // font-weight: 600; 
 `;
 
 const ConsultantButton = styled.button`
@@ -75,6 +81,8 @@ const WhyLandTitle = styled.h2`
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  // font-weight: 600; 
 `;
 
 const LogosContainer = styled.div`
@@ -99,6 +107,8 @@ const ImageSubtitle = styled.p`
   font-size: 1rem;
   color: #451a64;
   margin-top: 5px;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600; 
 `;
 
 const images = [
