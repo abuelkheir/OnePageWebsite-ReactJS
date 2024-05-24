@@ -3,7 +3,7 @@ import GlobalStyle from "./Styles/GlobalStyle";
 import Header from "./Components/Header";
 import MainSection from "./Components/MainSection";
 import LandInteriors from "./Components/LandInterior";
-// import Blogs from './Components/Blogs';
+import Blogs from "./Components/Blogs";
 import Footer from "./Components/Footer";
 import WhatWeDoSection from "./Components/WhatWeDoSection";
 
@@ -15,7 +15,7 @@ function App() {
       <MainSection />
       <LandInteriors />
       <WhatWeDoSection />
-      {/* <Blogs/> */}
+      <Blogs />
       <Footer />
     </>
   );
