@@ -61,7 +61,7 @@ const BlogContainer = styled.div`
   position: relative;
 
   &::-webkit-scrollbar {
-    display: none; // no scrollbar
+    display: none; /* Hide scrollbar for better aesthetics */
   }
 `;
 
@@ -94,7 +94,6 @@ const BlogCard = styled.div`
   }
 `;
 
-<<<<<<< HEAD
 const ArrowButton = styled.button`
   position: absolute;
   top: 50%;
@@ -125,12 +124,6 @@ const ArrowButton = styled.button`
     width: 20px;
     height: 20px;
   }
-=======
-const CarouselContainer = styled.div`
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
->>>>>>> c0e4688712bf9321b116660293c7fcece6e608eb
 `;
 
 const Blogs = () => {
@@ -146,7 +139,7 @@ const Blogs = () => {
 
   return (
     <BlogSection>
-      <h2>Blogs</h2>
+      <h2>Our Latest Blogs</h2>
       <div style={{ position: "relative" }}>
         <ArrowButton className="left" onClick={scrollLeft}>
           <img src={Arrow} alt="Left" />
