@@ -40,13 +40,14 @@ const blogs = [
       "Understand the pivotal role of furniture in home design, from selecting the right pieces to arranging them for optimal flow and functionality in your living space.",
   },
 ];
+
 const SectionTitle = styled.h2`
   font-size: 36px;
   color: black;
   margin-bottom: 40px;
   font-weight: 500;
   line-height: 54px;
-  text-alignment: left;
+  text-align: left;
   font-family: "Poppins", sans-serif;
   margin-left: 20px;
 `;
@@ -54,7 +55,7 @@ const SectionTitle = styled.h2`
 const BlogSection = styled.div`
   padding: 20px;
   text-align: left;
-  margin-left: 110px;
+  margin-left: 30px;
 `;
 
 const BlogContainer = styled.div`
@@ -64,6 +65,7 @@ const BlogContainer = styled.div`
   padding: 10px 0;
   scroll-behavior: smooth;
   position: relative;
+  width: 100%; /* Ensure container is not too wide */
 
   &::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better aesthetics */
@@ -129,7 +131,7 @@ const ArrowButton = styled.button`
   }
 
   &.right {
-    right: 10px;
+    right: 10px; /* Ensure it's visible on small screens */
   }
 
   img {
@@ -148,6 +150,7 @@ const Blogs = () => {
   const scrollRight = () => {
     containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
+
   const ViewAllButton = styled.button`
     width: 270px;
     height: 80px;
@@ -165,40 +168,13 @@ const Blogs = () => {
     display: block; /* Ensure button is displayed as a block element */
   `;
 
-  /*
-
-position: absolute;
-width: 270px;
-height: 80px;
-left: 809.26px;
-top: 2901.27px;
-
-background: #4B2A63;
-/* View all 
-
-position: absolute;
-width: 95px;
-height: 36px;
-left: 897.26px;
-top: 2924.27px;
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 36px;
-/* identical to box height 
-
-color: #FFFFFF;
-*/
-
   return (
     <BlogSection>
       <SectionTitle> Blogs</SectionTitle>
       <div style={{ position: "relative" }}>
-        {/* <ArrowButton className="left" onClick={scrollLeft}>
+        <ArrowButton className="left" onClick={scrollLeft}>
           <img src={Arrow} alt="Left" />
-        </ArrowButton> */}
+        </ArrowButton>
         <ArrowButton className="right" onClick={scrollRight}>
           <img src={Arrow} alt="Right" />
         </ArrowButton>

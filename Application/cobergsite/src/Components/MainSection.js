@@ -4,7 +4,7 @@ import styled from "styled-components";
 import mainImage from "../Assets/HeaderImages/HeaderImage.png";
 
 const MainSectionContainer = styled.section`
-  padding: 40px 20px;
+  padding: 40px 0px;
   display: flex;
   justify-content: left;
   background-color: #fff;
@@ -43,24 +43,6 @@ const Title = styled.h1`
   font-size: 26px;
   color: #000;
 `;
-/* Get personalised home interiors 
-
-position: absolute;
-width: 576px;
-height: 54px;
-left: 1127px;
-top: 508px;
-
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 54px;
-/* identical to box heightS
-
-color: #000000;
-*/
 
 const Subtitle = styled.h2`
   font-size: 36px;
