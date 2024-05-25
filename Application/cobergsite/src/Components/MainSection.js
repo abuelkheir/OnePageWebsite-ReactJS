@@ -25,11 +25,12 @@ const MainText = styled.div`
   position: absolute;
   top: 50%;
   left: 60%;
-  transform: translate(0%, -50%);
-  background-color: rgba(255, 255, 255, 0.82); /* White with 82% opacity */
-  padding: 20px;
-  width: 50%;
-  text-align: left;
+  transform: translate(35%, -50%);
+  background-color: rgba(255, 255, 255, 0.82);
+  padding: 18px;
+  padding-left: 167px;
+  width: 51%;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   display: flex;
@@ -37,27 +38,32 @@ const MainText = styled.div`
   justify-content: center;
 `;
 
-/*
-/* Rectangle 2 
-
-position: absolute;
-width: 997px;
-height: 404px;
-left: 942px;
-top: 447px;
-
-background: rgba(255, 255, 255, 0.82);
-
-*/
-
 const Title = styled.h1`
   margin-top: 40px;
-  font-size: 2rem;
+  font-size: 26px;
   color: #000;
 `;
+/* Get personalised home interiors 
+
+position: absolute;
+width: 576px;
+height: 54px;
+left: 1127px;
+top: 508px;
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 54px;
+/* identical to box heightS
+
+color: #000000;
+*/
 
 const Subtitle = styled.h2`
-  font-size: 2rem;
+  font-size: 36px;
   color: #451a64;
   margin-top: 10px;
 `;
@@ -71,6 +77,7 @@ const ConsultantButton = styled.button`
   background-color: #4b2a63;
   border: none;
   cursor: pointer;
+  justify-content: center;
 `;
 
 const MainSection = () => {

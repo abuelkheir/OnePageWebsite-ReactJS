@@ -26,7 +26,8 @@ const Logo = styled.div`
 `;
 
 const LogoImage = styled.img`
-  height: 50px; /* Adjust height as needed */
+  height: 111px; /* Adjust height as needed */
+  width: 111px;
 `;
 
 const RightBar = styled.div`
@@ -38,12 +39,14 @@ const JoinUs = styled.div`
   font-size: 1rem;
   color: #451a64;
   margin-left: 20px;
+  font-weight: 500;
 `;
 
 const Partner = styled.div`
   font-size: 1rem;
   color: #451a64;
   margin-left: 290px;
+  font-weight: 500;
 `;
 
 const Navigation = styled.nav`
@@ -62,6 +65,8 @@ const NavigationItem = styled.li`
   font-size: 1rem;
   color: black;
   margin: 0 80px;
+  font-weight: 400;
+  font-style: normal;
 `;
 
 const Header = () => {

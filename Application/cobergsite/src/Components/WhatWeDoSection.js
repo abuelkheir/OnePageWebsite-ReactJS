@@ -19,14 +19,14 @@ const images = [
 
 const WhatWeDoContainer = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   text-align: center;
   padding: 40px 20px;
   margin: 0 auto; /* Set left and right margins to auto */
 `;
 
 const WhyLandTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 36px;
   color: #333;
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif; /* Use Poppins font */
@@ -46,15 +46,14 @@ const ImageItemContainer = styled.div`
 `;
 
 const ImageItem = styled.img`
-  width: 150px;
-  height: auto;
-
-  radius: 15;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 286px;
+  height: 340px;
+  // border-radius: 5px; /* Assuming your images have a 5px border radius */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
 const ImageSubtitle = styled.p`
-  font-size: 1rem;
+  font-size: 24px;
   color: #451a64;
   margin-top: 20px;
   font-family: "Poppins", sans-serif; /* Use Poppins font */
@@ -65,7 +64,7 @@ const Paragraph = styled.p`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 27px;
   text-align: center;
   color: #000000;
@@ -74,7 +73,7 @@ const Paragraph = styled.p`
 const WhatWeDoSection = () => {
   return (
     <WhatWeDoContainer>
-      <WhyLandTitle>Why LAND Interiors</WhyLandTitle>
+      <WhyLandTitle>What we do ?</WhyLandTitle>
       <ImagesContainer>
         {images.map((image, index) => (
           <ImageItemContainer key={index}>

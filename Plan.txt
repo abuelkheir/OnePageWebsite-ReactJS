@@ -20,7 +20,7 @@ ________________________________________________________________________________
 9- Develop Why land Interiors Section. ✅ 
 		(Shadows for logos , right size from design) 
 10- Develop Whatwedo Section.✅ 
-		(Image sizing)
+		(Image sizing✅ , shadows ✅)
 
 11- Develop Blogs section. ✅ 
 	(Fix arrow not showing , adjusting size to fit figma design)
