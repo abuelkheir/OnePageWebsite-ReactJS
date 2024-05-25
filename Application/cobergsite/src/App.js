@@ -6,6 +6,7 @@ import LandInteriors from "./Components/LandInterior";
 import Blogs from "./Components/Blogs";
 import Footer from "./Components/Footer";
 import WhatWeDoSection from "./Components/WhatWeDoSection";
+import "./App.css";
 
 function App() {
   return (
