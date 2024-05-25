@@ -22,20 +22,32 @@ const WhatWeDoContainer = styled.div`
   max-width: 1500px;
   text-align: center;
   padding: 40px 20px;
-  margin: 0 auto; /* Set left and right margins to auto */
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 `;
 
-const WhyLandTitle = styled.h2`
+const WhatWeDoTitle = styled.h2`
   font-size: 36px;
-  color: #333;
+  color: black;
   margin-bottom: 30px;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-family: "Poppins", sans-serif;
+  text-align: center; /* Default alignment */
+  width: 100%; /* Ensure the title takes the full width */
+
+  @media (max-width: 1080px) {
+    text-align: left; /* Align the title to the left */
+    padding-left: 150px; /* Add padding to move the title away from the edge */
+  }
 `;
 
 const ImagesContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Default alignment */
   flex-wrap: wrap;
+
+  @media (max-width: 1080px) {
+    justify-content: center; /* Center the images */
+  }
 `;
 
 const ImageItemContainer = styled.div`
@@ -48,15 +60,19 @@ const ImageItemContainer = styled.div`
 const ImageItem = styled.img`
   width: 286px;
   height: 340px;
-  // border-radius: 5px; /* Assuming your images have a 5px border radius */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 1080px) {
+    width: 343px;
+    height: 407px;
+  }
 `;
 
 const ImageSubtitle = styled.p`
   font-size: 24px;
   color: #451a64;
   margin-top: 20px;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 `;
 
@@ -68,12 +84,16 @@ const Paragraph = styled.p`
   line-height: 27px;
   text-align: center;
   color: #000000;
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
 `;
 
 const WhatWeDoSection = () => {
   return (
     <WhatWeDoContainer>
-      <WhyLandTitle>What we do ?</WhyLandTitle>
+      <WhatWeDoTitle>What we do ?</WhatWeDoTitle>
       <ImagesContainer>
         {images.map((image, index) => (
           <ImageItemContainer key={index}>
@@ -92,4 +112,5 @@ const WhatWeDoSection = () => {
     </WhatWeDoContainer>
   );
 };
+
 export default WhatWeDoSection;

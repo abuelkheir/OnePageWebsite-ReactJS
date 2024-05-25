@@ -8,17 +8,29 @@ const MainSectionContainer = styled.section`
   display: flex;
   justify-content: left;
   background-color: #fff;
+
+  @media (max-width: 1080px) {
+    justify-content: center;
+  }
 `;
 
 const CardContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   position: relative;
+
+  @media (max-width: 1080px) {
+    max-width: 1080px;
+  }
 `;
 
 const MainImage = styled.img`
-  // width: 100%;
   height: auto;
+
+  @media (max-width: 1080px) {
+    width: 100%;
+    height: 757px;
+  }
 `;
 
 const MainText = styled.div`
@@ -36,18 +48,39 @@ const MainText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 1080px) {
+    left: 50%;
+    transform: translate(-50%, -6%);
+    width: 997px;
+    height: 404px;
+    padding-left: 18px;
+  }
 `;
 
 const Title = styled.h1`
   margin-top: 40px;
   font-size: 26px;
   color: #000;
+
+  @media (max-width: 1080px) {
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+  }
 `;
 
 const Subtitle = styled.h2`
   font-size: 36px;
-  color: #451a64;
+  color: black;
   margin-top: 10px;
+
+  @media (max-width: 1080px) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+  }
 `;
 
 const ConsultantButton = styled.button`
@@ -60,6 +93,17 @@ const ConsultantButton = styled.button`
   border: none;
   cursor: pointer;
   justify-content: center;
+
+  @media (max-width: 1080px) {
+    width: 630px;
+    height: 96px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0 auto;
+    transform: translate(0%, 92%);
+  }
 `;
 
 const MainSection = () => {

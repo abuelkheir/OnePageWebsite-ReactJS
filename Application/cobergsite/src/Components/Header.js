@@ -122,7 +122,7 @@ const HamburgerMenu = styled.div`
   @media (max-width: 1080px) {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 52px;
     right: 20px;
     font-size: 66px;
     line-height: 66px;

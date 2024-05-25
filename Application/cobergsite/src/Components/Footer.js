@@ -10,17 +10,45 @@ import YoutubeLogo from "../Assets/SocialMediaLogos/youtube.svg";
 import MainLogo from "../Assets/MainLogo/MainLogo.svg";
 
 const FooterWrapper = styled.footer`
+  max-width: 1920px;
+  height: 619px;
   background-color: #f8f8f8;
   padding: 47px 130px;
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+
+  @media (max-width: 1080px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    height: 508px;
+  }
 `;
 
 const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
+`;
+
+const CenteredColumn = styled.div`
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 1080px) {
+    display: flex;
+  }
 `;
 
 const Logo = styled.img`
@@ -48,44 +76,9 @@ const Text = styled.p`
   display: flex;
   align-items: center;
   color: #3d3d3d;
-`;
-
-const WhatWeDoWrapper = styled.div`
-  margin-top: 55px;
-  margin-left: 40px; /* Adjust the left margin as needed */
-  margin-bottom: 20px; /* Adjust the bottom margin as needed */
-`;
-
-const WhatWeDoLink = styled.a`
-  display: block; /* Ensure each link is on a new line */
-  margin: 5px 0;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 35px;
-  color: #4f4f4f;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
+  @media (max-width: 1080px) {
+    display: none;
   }
-`;
-
-const GetInTouchWrapper = styled.div`
-  margin-top: 55px;
-  margin-left: 40px; /* Adjust the left margin as needed */
-  margin-bottom: 20px; /* Adjust the bottom margin as needed */
-`;
-
-const GetInTouchItem = styled.p`
-  margin: 5px 0;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 35px;
-  color: #4f4f4f;
 `;
 
 const SocialIconsWrapper = styled.div`
@@ -105,6 +98,10 @@ const FooterLinksWrapper = styled.div`
   justify-content: center;
   margin-top: 20px;
   margin-left: 30px;
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
 `;
 
 const FooterLink = styled.a`
@@ -116,6 +113,22 @@ const FooterLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+const GetInTouchWrapper = styled.div`
+  margin-top: 55px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+`;
+
+const GetInTouchItem = styled.p`
+  margin: 5px 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  color: #4f4f4f;
 `;
 
 const Footer = () => {
@@ -149,18 +162,20 @@ const Footer = () => {
         </SocialIconsWrapper>
       </FooterSection>
       <FooterSection>
-        <WhatWeDoWrapper>
-          <Title>WHAT WE DO</Title>
-          <WhatWeDoLink href="/interior-design">Interior Design</WhatWeDoLink>
-          <WhatWeDoLink href="/kitchen">Kitchen</WhatWeDoLink>
-          <WhatWeDoLink href="/ceiling">Ceiling</WhatWeDoLink>
-          <WhatWeDoLink href="/bedroom">Bedroom</WhatWeDoLink>
-          <WhatWeDoLink href="/smart-home">Smart Home</WhatWeDoLink>
-        </WhatWeDoWrapper>
+        <Title>WHAT WE DO</Title>
+        <GetInTouchWrapper>
+          <GetInTouchItem href="/interior-design">
+            Interior Design
+          </GetInTouchItem>
+          <GetInTouchItem href="/kitchen">Kitchen</GetInTouchItem>
+          <GetInTouchItem href="/ceiling">Ceiling</GetInTouchItem>
+          <GetInTouchItem href="/bedroom">Bedroom</GetInTouchItem>
+          <GetInTouchItem href="/smart-home">Smart Home</GetInTouchItem>
+        </GetInTouchWrapper>
       </FooterSection>
       <FooterSection>
+        <Title>Get in touch</Title>
         <GetInTouchWrapper>
-          <Title>Get in touch</Title>
           <GetInTouchItem>
             Email:{" "}
             <a href="mailto:landinteriors@gmail.com">landinteriors@gmail.com</a>
@@ -177,6 +192,42 @@ const Footer = () => {
         <FooterLink href="/blog">Blog</FooterLink>
         <FooterLink href="/contact">Contact</FooterLink>
       </FooterLinksWrapper>
+      <CenteredColumn>
+        <Logo src={MainLogo} alt="Main Logo" />
+        <Text>
+          We introduce ourselves as LAND Interior and Architectural Design
+          Consultancy – one of the best interior designers in Chennai. Chennai
+          Luxury Interior and Architectural Design Consultancy has challenged
+          the conventional way of interior designing and given new dimensions to
+          the art of interior designing.
+        </Text>
+        <GetInTouchWrapper>
+          <GetInTouchItem>
+            Email:{" "}
+            <a href="mailto:landinteriors@gmail.com">landinteriors@gmail.com</a>
+          </GetInTouchItem>
+          <GetInTouchItem>
+            Phone: <a href="tel:+919898765656">+91 98987 65656</a>
+          </GetInTouchItem>
+        </GetInTouchWrapper>
+        <SocialIconsWrapper>
+          <a href="https://www.facebook.com">
+            <SocialIcon src={FacebookLogo} alt="Facebook" />
+          </a>
+          <a href="https://www.linkedin.com">
+            <SocialIcon src={LinkedinLogo} alt="LinkedIn" />
+          </a>
+          <a href="https://www.twitter.com">
+            <SocialIcon src={TwitterLogo} alt="Twitter" />
+          </a>
+          <a href="https://www.youtube.com">
+            <SocialIcon src={YoutubeLogo} alt="YouTube" />
+          </a>
+          <a href="https://www.instagram.com">
+            <SocialIcon src={InstagramLogo} alt="Instagram" />
+          </a>
+        </SocialIconsWrapper>
+      </CenteredColumn>
     </FooterWrapper>
   );
 };
