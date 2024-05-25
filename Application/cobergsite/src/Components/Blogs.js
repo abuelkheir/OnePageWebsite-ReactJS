@@ -40,16 +40,21 @@ const blogs = [
       "Understand the pivotal role of furniture in home design, from selecting the right pieces to arranging them for optimal flow and functionality in your living space.",
   },
 ];
+const SectionTitle = styled.h2`
+  font-size: 36px;
+  color: black;
+  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 54px;
+  text-alignment: left;
+  font-family: "Poppins", sans-serif;
+  margin-left: 20px;
+`;
 
 const BlogSection = styled.div`
   padding: 20px;
-  text-align: center;
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-  }
+  text-align: left;
+  margin-left: 110px;
 `;
 
 const BlogContainer = styled.div`
@@ -69,27 +74,34 @@ const BlogCard = styled.div`
   flex: 0 0 auto;
   width: 300px;
   margin-right: 20px;
-  text-align: center;
+  text-align: left; /* Align both text and images to the left */
 
   img {
-    width: 100%;
-    height: 200px; /* Fixed height to ensure consistency */
+    width: 100%; /* Ensure image fills its container */
+    height: 333px; /* Fixed height to ensure consistency */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added drop shadow */
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 24px;
     margin-top: 10px;
-    font-weight: bold;
+    font-weight: 500;
     font-family: "Poppins", sans-serif;
+    font-style: normal;
+    line-height: 36px;
+    color: black;
   }
 
   .description {
     font-size: 0.9rem; /* Smaller font size for description */
     margin-top: 5px;
-    color: #555;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: black;
     font-family: "Poppins", sans-serif;
   }
 `;
@@ -136,14 +148,57 @@ const Blogs = () => {
   const scrollRight = () => {
     containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
+  const ViewAllButton = styled.button`
+    width: 270px;
+    height: 80px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4b2a63;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure button is displayed as a block element */
+  `;
+
+  /*
+
+position: absolute;
+width: 270px;
+height: 80px;
+left: 809.26px;
+top: 2901.27px;
+
+background: #4B2A63;
+/* View all 
+
+position: absolute;
+width: 95px;
+height: 36px;
+left: 897.26px;
+top: 2924.27px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height 
+
+color: #FFFFFF;
+*/
 
   return (
     <BlogSection>
-      <h2>Our Latest Blogs</h2>
+      <SectionTitle> Blogs</SectionTitle>
       <div style={{ position: "relative" }}>
-        <ArrowButton className="left" onClick={scrollLeft}>
+        {/* <ArrowButton className="left" onClick={scrollLeft}>
           <img src={Arrow} alt="Left" />
-        </ArrowButton>
+        </ArrowButton> */}
         <ArrowButton className="right" onClick={scrollRight}>
           <img src={Arrow} alt="Right" />
         </ArrowButton>
@@ -157,6 +212,7 @@ const Blogs = () => {
           ))}
         </BlogContainer>
       </div>
+      <ViewAllButton>View all</ViewAllButton>
     </BlogSection>
   );
 };

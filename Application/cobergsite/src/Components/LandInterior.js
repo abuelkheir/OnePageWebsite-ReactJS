@@ -22,9 +22,11 @@ const SectionContainer = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 36px;
+  color: black;
   margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 54px;
 `;
 
 const LogosContainer = styled.div`
