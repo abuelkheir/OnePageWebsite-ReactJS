@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import styled, { keyframes } from "styled-components";
 import logoImage from "../Assets/MainLogo/MainLogo.svg"; // Corrected path
 
@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
   background-color: #f8f8f8;
   width: 100%;
   max-width: 1920px;
-  height: 369px;
+  height: 247px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -179,15 +179,19 @@ const MobileNavItem = styled.a`
 const Header = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
-  const toggleMobileNav = () => {
-    setMobileNavOpen(!isMobileNavOpen);
-  };
+  const toggleMobileNav = useCallback(() => {
+    setMobileNavOpen((prev) => !prev);
+  }, []);
 
   return (
     <HeaderContainer>
       <TopBar>
         <Logo>
-          <LogoImage src={logoImage} alt="Logo" />
+          <LogoImage
+            src={logoImage}
+            alt="Logo"
+            onError={(e) => (e.target.src = "fallbackLogo.svg")}
+          />
         </Logo>
         <RightBar>
           <JoinUsPartnerContainer>
@@ -215,9 +219,15 @@ const Header = () => {
           </NavigationItem>
         </NavigationList>
       </Navigation>
-      <HamburgerMenu onClick={toggleMobileNav}>☰</HamburgerMenu>
+      <HamburgerMenu
+        onClick={toggleMobileNav}
+        aria-controls="mobile-nav"
+        aria-expanded={isMobileNavOpen}
+      >
+        ☰
+      </HamburgerMenu>
       {isMobileNavOpen && (
-        <MobileNav>
+        <MobileNav id="mobile-nav">
           <MobileNavItem href="#about">About</MobileNavItem>
           <MobileNavItem href="#projects">Projects</MobileNavItem>
           <MobileNavItem href="#studio">Studio</MobileNavItem>

@@ -49,13 +49,13 @@ const SectionTitle = styled.h2`
   line-height: 54px;
   text-align: left;
   font-family: "Poppins", sans-serif;
-  margin-left: 20px;
+  margin-left: 93px;
 `;
 
 const BlogSection = styled.div`
   padding: 20px;
   text-align: left;
-  margin-left: 30px;
+  overflow: hidden; /* Prevent horizontal scroll */
 `;
 
 const BlogContainer = styled.div`
@@ -63,9 +63,11 @@ const BlogContainer = styled.div`
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding: 10px 0;
+  padding-left: 100px; /* Add padding to the left */
   scroll-behavior: smooth;
   position: relative;
-  width: 100%; /* Ensure container is not too wide */
+  width: calc(100% - 20px); /* Account for potential scrollbar width */
+  margin-left: -10px; /* Align the first image correctly */
 
   &::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better aesthetics */
@@ -75,7 +77,7 @@ const BlogContainer = styled.div`
 const BlogCard = styled.div`
   flex: 0 0 auto;
   width: 300px;
-  margin-right: 20px;
+  margin-right: 68px; /* Increase margin-right to 68px */
   text-align: left; /* Align both text and images to the left */
 
   img {
@@ -110,33 +112,45 @@ const BlogCard = styled.div`
 
 const ArrowButton = styled.button`
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  width: 60px; /* Wider button for rectangle shape */
-  height: 40px;
+  top: 34%; /* Adjusted top position */
+  width: 57px; /* Fixed width */
+  height: 53px; /* Fixed height */
+  background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+  border: 1px solid white; /* Black border */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow */
+  box-sizing: border-box; /* Box-sizing property */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: visible; /* Ensure visibility */
+  padding: 0; /* Remove padding for precise centering */
+  z-index: 10; /* Ensure arrows are on top of other elements */
 
   &:hover {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1); /* Full opacity on hover */
   }
 
   &.left {
-    left: 10px;
+    left: 10px; /* Position from left */
   }
 
   &.right {
-    right: 10px; /* Ensure it's visible on small screens */
+    right: 10px; /* Position from right */
   }
 
   img {
     width: 20px;
     height: 20px;
+  }
+
+  @media (max-width: 1920px) {
+    display: display}; /* Hide arrows if specified */
+  }
+
+  @media (max-width: 1080px) {
+    top: /* your adjusted value here */ ;
+    right: /* your adjusted value here */ ;
+    left: /* your adjusted value here */ ;
   }
 `;
 
@@ -170,11 +184,8 @@ const Blogs = () => {
 
   return (
     <BlogSection>
-      <SectionTitle> Blogs</SectionTitle>
+      <SectionTitle>Blogs</SectionTitle>
       <div style={{ position: "relative" }}>
-        <ArrowButton className="left" onClick={scrollLeft}>
-          <img src={Arrow} alt="Left" />
-        </ArrowButton>
         <ArrowButton className="right" onClick={scrollRight}>
           <img src={Arrow} alt="Right" />
         </ArrowButton>

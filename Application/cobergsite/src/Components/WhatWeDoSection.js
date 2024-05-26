@@ -28,6 +28,7 @@ const WhatWeDoContainer = styled.div`
 
 const WhatWeDoTitle = styled.h2`
   font-size: 36px;
+  font-weight: 500;
   color: black;
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;

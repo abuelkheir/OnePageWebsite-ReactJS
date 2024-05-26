@@ -74,7 +74,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 36px;
   color: black;
-  margin-top: 10px;
+  margin-top: -5px;
 
   @media (max-width: 1080px) {
     font-style: normal;
