@@ -64,6 +64,7 @@ const Title = styled.h3`
   font-size: 18px;
   line-height: 27px;
   color: #000000;
+  margin-bottom: 20px; /* Add margin to separate from content below */
 `;
 
 const Text = styled.p`
@@ -84,6 +85,9 @@ const Text = styled.p`
 const SocialIconsWrapper = styled.div`
   display: flex;
   margin-top: 40px;
+  @media (max-width: 1080px) {
+    margin-top: 5px;
+  }
 `;
 
 const SocialIcon = styled.img`
@@ -95,8 +99,8 @@ const SocialIcon = styled.img`
 const FooterLinksWrapper = styled.div`
   grid-column: span 3;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: end;
+  margin-top: -160px;
   margin-left: 30px;
 
   @media (max-width: 1080px) {
@@ -116,8 +120,6 @@ const FooterLink = styled.a`
 `;
 
 const GetInTouchWrapper = styled.div`
-  margin-top: 55px;
-  margin-left: 40px;
   margin-bottom: 20px;
 `;
 
