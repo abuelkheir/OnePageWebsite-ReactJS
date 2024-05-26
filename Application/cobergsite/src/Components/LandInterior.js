@@ -17,8 +17,10 @@ const Logos = [
 
 const SectionContainer = styled.section`
   padding: 60px 20px;
-  background-color: #f8f8f8;
+  background-color: transperant;
   text-align: center;
+  position: relative; /* Ensure this section is positioned */
+  z-index: 2; /* Set z-index to 2 */
 `;
 
 const SectionTitle = styled.h2`

@@ -24,6 +24,8 @@ const WhatWeDoContainer = styled.div`
   padding: 40px 20px;
   margin: 0 auto;
   box-sizing: border-box; /* Ensure padding is included in the width */
+  position: relative; /* Ensure this section is positioned */
+  z-index: 2; /* Set z-index to 2 */
 `;
 
 const WhatWeDoTitle = styled.h2`

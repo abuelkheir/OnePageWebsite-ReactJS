@@ -147,19 +147,15 @@ const ArrowButton = styled.button`
     display: display}; /* Hide arrows if specified */
   }
 
-  @media (max-width: 1080px) {
-    top: /* your adjusted value here */ ;
-    right: /* your adjusted value here */ ;
-    left: /* your adjusted value here */ ;
-  }
+
 `;
 
 const Blogs = () => {
   const containerRef = useRef(null);
 
-  const scrollLeft = () => {
-    containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
-  };
+  // const scrollLeft = () => {
+  //   containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  // };
 
   const scrollRight = () => {
     containerRef.current.scrollBy({ left: 300, behavior: "smooth" });

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import mainImage from "../Assets/HeaderImages/HeaderImage.png";
 
 const MainSectionContainer = styled.section`
@@ -8,6 +7,7 @@ const MainSectionContainer = styled.section`
   display: flex;
   justify-content: left;
   background-color: #fff;
+  position: relative; /* Ensure this section is positioned */
 
   @media (max-width: 1080px) {
     justify-content: center;
@@ -18,6 +18,7 @@ const CardContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   position: relative;
+  z-index: 2; /* Set z-index to 2 */
 
   @media (max-width: 1080px) {
     max-width: 1080px;
@@ -48,6 +49,7 @@ const MainText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 3; /* Set z-index to 3 */
 
   @media (max-width: 1080px) {
     left: 50%;
