@@ -7,7 +7,7 @@ const MainSectionContainer = styled.section`
   display: flex;
   justify-content: left;
   background-color: #fff;
-  position: relative; /* Ensure this section is positioned */
+  position: relative;
 
   @media (max-width: 1080px) {
     justify-content: center;

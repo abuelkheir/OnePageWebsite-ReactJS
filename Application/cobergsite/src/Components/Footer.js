@@ -58,7 +58,6 @@ const Logo = styled.img`
 `;
 
 const Title = styled.h3`
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -69,7 +68,7 @@ const Title = styled.h3`
 
 const Text = styled.p`
   margin: 5px 0;
-  font-family: "Poppins";
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -125,7 +124,6 @@ const GetInTouchWrapper = styled.div`
 
 const GetInTouchItem = styled.p`
   margin: 5px 0;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

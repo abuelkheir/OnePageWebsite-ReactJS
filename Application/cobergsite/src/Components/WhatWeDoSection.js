@@ -23,8 +23,8 @@ const WhatWeDoContainer = styled.div`
   text-align: center;
   padding: 40px 20px;
   margin: 0 auto;
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  position: relative; /* Ensure this section is positioned */
+  box-sizing: border-box;
+  position: relative;
   z-index: 2; /* Set z-index to 2 */
 `;
 
@@ -34,12 +34,12 @@ const WhatWeDoTitle = styled.h2`
   color: black;
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
-  text-align: center; /* Default alignment */
-  width: 100%; /* Ensure the title takes the full width */
+  text-align: center;
+  width: 100%;
 
   @media (max-width: 1080px) {
-    text-align: left; /* Align the title to the left */
-    padding-left: 150px; /* Add padding to move the title away from the edge */
+    text-align: left;
+    padding-left: 150px;
   }
 `;
 

@@ -69,7 +69,7 @@ const PolygonFooter = styled.div`
     0% 30%
   );
 
-  background-color: #f5fcff; /* Change color as needed */
+  background-color: #f5fcff;
   z-index: -1; /* Ensure it's visible above other elements */
   // margin: 0 auto;
   @media (max-width: 1080px) {

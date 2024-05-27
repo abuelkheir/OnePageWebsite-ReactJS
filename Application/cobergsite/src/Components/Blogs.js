@@ -112,30 +112,30 @@ const BlogCard = styled.div`
 
 const ArrowButton = styled.button`
   position: absolute;
-  top: 34%; /* Adjusted top position */
-  width: 57px; /* Fixed width */
-  height: 53px; /* Fixed height */
-  background: rgba(255, 255, 255, 0.8); /* White background with opacity */
-  border: 1px solid white; /* Black border */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow */
-  box-sizing: border-box; /* Box-sizing property */
+  top: 34%; 
+  width: 57px; 
+  height: 53px; 
+  background: rgba(255, 255, 255, 0.8); 
+  border: 1px solid white; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0; /* Remove padding for precise centering */
-  z-index: 10; /* Ensure arrows are on top of other elements */
+  padding: 0; 
+  z-index: 10; 
 
   &:hover {
     background: rgba(255, 255, 255, 1); /* Full opacity on hover */
   }
 
   &.left {
-    left: 10px; /* Position from left */
+    left: 10px; 
   }
 
   &.right {
-    right: 10px; /* Position from right */
+    right: 10px; 
   }
 
   img {
@@ -144,7 +144,7 @@ const ArrowButton = styled.button`
   }
 
   @media (max-width: 1920px) {
-    display: display}; /* Hide arrows if specified */
+    display: display}; 
   }
 
 
@@ -174,8 +174,8 @@ const Blogs = () => {
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
-    margin: 0 auto; /* Center the button horizontally */
-    display: block; /* Ensure button is displayed as a block element */
+    margin: 0 auto;
+    display: block;
   `;
 
   return (
