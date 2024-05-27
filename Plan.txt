@@ -30,7 +30,7 @@ ________________________________________________________________________________
 
 14- first Draft.✅
 
-15- Refurbishments for each section. 
+15- Refurbishments for each section. ✅
 
 __________________________________________________________________________
-16- Media Queries for mobile version. 
+16- Media Queries for mobile version. ✅

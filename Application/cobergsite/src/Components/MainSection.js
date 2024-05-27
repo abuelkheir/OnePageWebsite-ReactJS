@@ -11,6 +11,7 @@ const MainSectionContainer = styled.section`
 
   @media (max-width: 1080px) {
     justify-content: center;
+    padding: 0px 0px;
   }
 `;
 
@@ -104,7 +105,7 @@ const ConsultantButton = styled.button`
     font-weight: 600;
     font-size: 30px;
     margin: 0 auto;
-    transform: translate(0%, 92%);
+    transform: translate(0%, 55%);
   }
 `;
 
